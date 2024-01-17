@@ -32,3 +32,37 @@ nav{
     width: 100px;
     filter: drop-shadow(2px 2px 2px white);
 }
+
+.container .links a{
+    color:white;
+    text-decoration:none;
+    cursor:pointer;
+    position:relative;
+    margin:0 20px;
+    transition:0.3s linear;
+}
+
+.links a::before{
+    content:"";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    border-bottom: 2px solid rgb(216, 22, 174);
+    height: 3.5px;
+    transition:0.3s linear;
+}
+
+.links a:hover::before,
+.links a:hover{
+    color: rgb(216, 22, 174);
+    width:100%;
+}
+
+.container .search i{
+    color: white;
+    cursor:pointer;
+    font-size:1.3rem;
+    
+}
+
