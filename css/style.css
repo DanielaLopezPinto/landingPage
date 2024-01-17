@@ -83,24 +83,27 @@ section .content{
 .content .main-content{
     color:white;
     max-width:600px;
-    width:100px;
+    width:100%;
     margin:0 auto;
 }
 
 .main-content h1{
-    font-size:clamp(2rem, 1rem + 5vw, 4rem);
+    font-size:clamp(2rem, 1rem + 5vw,4rem);
 }
 
 .main-content h2{
     color:rgb(216, 22, 174);
-    font-size:clamp(2rem, 1rem + 5vw, 3.5rem);
+    font-size:clamp(2rem, 1rem + 5vw,3.5rem);
 }
 
 .main-content p{
     margin-top:10px;
+    color:#635e5c;
 }
 
-
+.main-content .order{
+    display:flex;
+}
 
 
 
