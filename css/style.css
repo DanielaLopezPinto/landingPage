@@ -119,13 +119,35 @@ section .content{
     border:none;
     outline:none;
     border-radius:10px;
-    background: linear-gradient(to bottom right, rgb(216, 22, 174) 40% #8a3313);
+    background: linear-gradient(to bottom right, rgb(216, 22, 174) 40% #8a135c);
     color: white;
     font-weight:700;
     padding: 0 2px;
     font-size: clamp(0.6rem, 1rem 5vw, 3rem);
 }
 
+.order button:hover{
+    box-shadow:0 0 30px rgb(216, 22, 174);
+    background:linear-gradient(to bottom right, #8a135c, rgb(216, 22, 174) 40%);
+}
+
+.content .image img{
+    min-width:350px;
+    width:100%;
+    margin-right:100px;
+    transform:rotate(40deg);
+    filter:drop-shadow(-10px -10px 200px rgb(216, 22, 174));
+}
+@media(max-width:800px){
+    .content{
+        display: flex;
+        width: 100%;
+        flex-direction: column-reverse;
+    }
+    .main-content{
+        margin: 0 10px;
+    }
+}
 
 
 
