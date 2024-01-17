@@ -103,7 +103,30 @@ section .content{
 
 .main-content .order{
     display:flex;
+    margin:20px 10px;
+    width:100%;
+    justify-content:space-around;
+    min-height:7vh;
 }
+
+.order{
+    font-size:1.8rem;
+}
+
+.order button{
+    min-width:50%;
+    margin-left: 10px;
+    border:none;
+    outline:none;
+    border-radius:10px;
+    background: linear-gradient(to bottom right, rgb(216, 22, 174) 40% #8a3313);
+    color: white;
+    font-weight:700;
+    padding: 0 2px;
+    font-size: clamp(0.6rem, 1rem 5vw, 3rem);
+}
+
+
 
 
 
