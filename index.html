@@ -19,6 +19,12 @@
             <div class="logo">
                 <img src="storage/img/NikeLogoPNGImage.png" alt="">
             </div>
+
+            <!-- Agregamos el botón de menú para dispositivos móviles -->
+            <div class="menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
             <div class="links">
                 <a href="">MEN</a>
                 <a href="">WOMEN</a>
@@ -26,6 +32,7 @@
                 <a href="">CUZTOMIZE</a>
                 <a href="">COLLECTIONS</a>
             </div>
+
             <div class="search">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </div>
@@ -50,10 +57,21 @@
     </section>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-      AOS.init({
-        offset:1
-      });
-
+        AOS.init({
+            offset:1
+        });
+    </script>
+    <script src="js/main.js" defer></script>
+    <script>
+        // Agregamos un evento al botón de menú para mostrar/ocultar los enlaces
+        document.addEventListener('DOMContentLoaded', function () {
+            let nav = document.querySelector('nav');
+            let menuBtn = document.querySelector('.menu');
+            
+            menuBtn.addEventListener('click', function () {
+                nav.classList.toggle('active');
+            });
+        });
     </script>
 </body>
 </html>

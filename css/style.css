@@ -167,7 +167,42 @@ section .content{
 }
 
 
+/* Agregamos estilos para el botón de menú en dispositivos móviles */
+.menu {
+    display: none; /* Inicialmente oculto en pantallas grandes */
+    cursor: pointer;
+    color: white;
+    font-size: 1.5rem;
+    margin-right: 20px;
+}
 
+/* Estilos para la barra de navegación en dispositivos móviles */
+nav.active {
+    transform: translateX(0);
+}
+
+/* Mostrar el botón de menú solo en dispositivos móviles */
+@media (max-width: 800px) {
+    .menu {
+        display: block;
+    }
+
+    /* Ocultar la barra de navegación en pantallas pequeñas */
+    .links {
+        display: none;
+    }
+
+    /* Asegurar que el botón de menú no aparezca en pantallas grandes */
+    @media (min-width: 801px) {
+        .menu {
+            display: none;
+        }
+
+        .links {
+            display: flex;
+        }
+    }
+}
 
 
 
