@@ -148,17 +148,26 @@ section .content{
     .main-content{
         margin: 0 10px;
     }
+    .content .main-content {
+    color: white;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px; 
+    }
 }
 
-@media(min-width:884px){
+@media(min-width:800px){
     .content .image img{
         min-width:500px;
     }
 }
 
-@media(max-width:440px){
+
+@media(max-width:800px){
     .link{
         display:none;
+        z-index:10;
     }
     .image img{
         width:100px;
@@ -172,9 +181,10 @@ section .content{
     color: rgb(255, 255, 255);
     font-size: 1.5rem;
     margin-right:10px;
+    z-index:10;
 }
 
-/* Mostrar el botón de menú solo en dispositivos móviles */
+
 @media (max-width: 800px) {
     .menu {
         display: block;
@@ -182,12 +192,11 @@ section .content{
 
     .container .image {
         position: relative;
-        z-index: 1; /* Establece un z-index más alto para la imagen */
     }
     
     nav.active {
         transform: translateX(0);
-        z-index: 2; /* Establece un z-index más alto para el menú desplegable */
+        z-index: 10; /* Establece un z-index más alto para el menú desplegable */
     }
     
 
@@ -195,7 +204,8 @@ section .content{
     .container .links,
     .container nav.active {
         display: none;
-        flex-direction: column; /* Añadimos esto para mostrar los enlaces en columna */
+        flex-direction: column; 
+        z-index:10;
     }
 
     .container .links.active,
@@ -209,8 +219,8 @@ section .content{
         top:50px;
         left:0;
         transform: translateX(100%);
-        transform: translateY();
         transition: transform 0.3s;
+        z-index:10;
     }
 
     /* Agregamos estilos para la lista de enlaces */
@@ -220,7 +230,7 @@ section .content{
         margin: 0;
         display: flex;
         flex-direction: column;
-       
+        z-index:10;
     }
 }
 
