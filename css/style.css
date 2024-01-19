@@ -141,11 +141,15 @@ section .content{
     filter:drop-shadow(-10px -10px 200px rgb(216, 22, 174));
 }
 
-nav.active{
+/*nav.active{
     display:none;
-}
+}*/
 
 @media (max-width: 800px) {
+    .container .search i{
+        display:none;
+    }
+
     .content{
         display: flex;
         width: 100%;
@@ -155,7 +159,7 @@ nav.active{
         margin: 0 10px;
     }
     .content .main-content{
-    color: white;
+    color: rgb(243, 243, 243);
     max-width: 600px;
     width: 100%;
     margin: 0 auto;
@@ -165,40 +169,36 @@ nav.active{
 
 @media (max-width: 800px) {
     .container .image img {
-        max-width: 100%; /* Establecer el ancho máximo al 100% para que se ajuste al contenedor */
-        height: auto;    /* Para mantener la proporción original de la imagen */
-        margin-right: 0;
-        transform: rotate(40deg) translateX(0); /* Ajustar la transformación en dispositivos móviles */
+        max-width: 500px; /* Ajustar la transformación en dispositivos móviles */
     }
 }
 
 @media (max-width: 800px) {
     .links{
-        display: none;
+        display:flex;
     }
-    .container .image img{
-        width: 100px;
-        margin-right: 0;
-        
+    .image{
+        width:300px;
+        margin-left:none;
+        z-index:0;
+        position: relative;
     }
 }
 
 .menu {
-    display: none; 
+    display:flex;
     cursor: pointer;
     color: rgb(255, 255, 255);
     font-size: 1.5rem;
-    margin-right:10px;
+    margin-left:auto;
 }
 
 
 @media (max-width: 800px) {
     .menu {
-        display: block;
-    }
-    .container .image img{
+        display: flex;
         position: relative;
-        z-index:-1;
+        z-index: 10;
     }
     
     nav.active {
@@ -211,6 +211,8 @@ nav.active{
     .container nav.active{
         display: none;
         flex-direction: column; 
+        position: relative;
+        z-index: 10;
     }
 
     .container .links.active,
@@ -219,13 +221,14 @@ nav.active{
         flex-direction: column;
         position:fixed;
         background-color: rgba(201, 22, 162, 0.705);
-        display: flex;
-        align-items: center;
+        align-items: 0;
         top:50px;
-        left:0;
+        right: 200px;
         transform: translateX(100%);
         transition: transform 0.3s;
         z-index:10;
+        width: 80%; /* Ajusta el ancho del menú según tus necesidades */
+        margin-left: 10px; /* Añade margen izquierdo */
+        margin-right: 10px; /* Añade margen derecho */
     }
 }
-
