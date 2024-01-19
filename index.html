@@ -3,8 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="js/main.js"defer></script>
     <link rel="shortcut icon" href="storage/img/shoes.png" type="image/png">
@@ -18,25 +16,32 @@
         <div class="container">
             <div class="logo">
                 <img src="storage/img/NikeLogoPNGImage.png" alt="">
+                <p>Nike</p>
             </div>
-
-            <!-- Agregamos el botón de menú para dispositivos móviles -->
             <div class="menu">
-                <i class="fa-solid fa-bars"></i>
+                <i class="fas fa-bars"></i>
             </div>
-
             <div class="links">
+                <!-- Mantenemos los enlaces originales -->
                 <a href="">MEN</a>
                 <a href="">WOMEN</a>
                 <a href="">KIDS</a>
                 <a href="">CUZTOMIZE</a>
                 <a href="">COLLECTIONS</a>
             </div>
-
             <div class="search">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </div>
         </div>
+    </nav>
+    <nav class="active">
+        <ul>
+            <li><a>INICIO</a></li>
+            <li><a>MEN</a></li>
+            <li><a>WOMEN</a></li>
+            <li><a>CUZTOMIZE</a></li>
+            <li><a>COLLECTIONS</a></li>
+        </ul>   
     </nav>
     <section>
         <div class="content">
@@ -63,15 +68,15 @@
     </script>
     <script src="js/main.js" defer></script>
     <script>
-        // Agregamos un evento al botón de menú para mostrar/ocultar los enlaces
         document.addEventListener('DOMContentLoaded', function () {
-            let nav = document.querySelector('nav');
-            let menuBtn = document.querySelector('.menu');
-            
-            menuBtn.addEventListener('click', function () {
-                nav.classList.toggle('active');
-            });
-        });
+    let nav = document.querySelector('nav');
+    let menuBtn = document.querySelector('.menu');
+    let links = document.querySelector('.links'); // Agregamos esta línea para seleccionar .links
+    menuBtn.addEventListener('click', function () {
+        nav.classList.toggle('active');
+        links.classList.toggle('active'); // Agregamos esta línea para activar/desactivar .links
+    });
+});
     </script>
 </body>
 </html>

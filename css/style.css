@@ -152,7 +152,6 @@ section .content{
 @media(min-width:884px){
     .content .image img{
         min-width:500px;
-
     }
 }
 
@@ -166,19 +165,12 @@ section .content{
     }
 }
 
-
-/* Agregamos estilos para el botón de menú en dispositivos móviles */
 .menu {
     display: none; /* Inicialmente oculto en pantallas grandes */
     cursor: pointer;
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 1.5rem;
-    margin-right: 20px;
-}
-
-/* Estilos para la barra de navegación en dispositivos móviles */
-nav.active {
-    transform: translateX(0);
+    margin-right:10px;
 }
 
 /* Mostrar el botón de menú solo en dispositivos móviles */
@@ -188,23 +180,35 @@ nav.active {
     }
 
     /* Ocultar la barra de navegación en pantallas pequeñas */
-    .links {
+    .container .links,
+    .container nav.active {
         display: none;
+        flex-direction: column; /* Añadimos esto para mostrar los enlaces en columna */
     }
 
-    /* Asegurar que el botón de menú no aparezca en pantallas grandes */
-    @media (min-width: 801px) {
-        .menu {
-            display: none;
-        }
+    .container .links.active,
+    .container nav.active {
+        display: flex;
+        flex-direction: column;
+        position:fixed;
+        background-color: rgba(216, 22, 174, 0.185);
+        display: flex;
+        align-items: center;
+        top:50px;
+        left:0;
+        transform: translateX(100%);
+        transform: translateY();
+        transition: transform 0.3s;
+    }
 
-        .links {
-            display: flex;
-        }
+    /* Agregamos estilos para la lista de enlaces */
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+       
     }
 }
-
-
-
-
 
