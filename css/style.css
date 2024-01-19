@@ -213,7 +213,7 @@ section .content{
         display: flex;
         flex-direction: column;
         position:fixed;
-        background-color: rgba(216, 22, 174, 0.678);
+        background-color: rgba(201, 22, 162, 0.705);
         display: flex;
         align-items: center;
         top:50px;
