@@ -132,6 +132,8 @@ section .content{
 }
 
 .content .image img{
+    position: relative;
+    z-index:-5;
     max-width:450px;
     width:100%;
     margin-right:100px;
@@ -139,7 +141,11 @@ section .content{
     filter:drop-shadow(-10px -10px 200px rgb(216, 22, 174));
 }
 
-@media(max-width:800px){
+/*nav.active{
+    display:none;
+}*/
+
+@media (max-width: 800px) {
     .content{
         display: flex;
         width: 100%;
@@ -148,7 +154,7 @@ section .content{
     .main-content{
         margin: 0 10px;
     }
-    .content .main-content {
+    .content .main-content{
     color: white;
     max-width: 600px;
     width: 100%;
@@ -157,20 +163,19 @@ section .content{
     }
 }
 
-@media(min-width:800px){
-    .content .image img{
-        min-width:500px;
+@media (max-width: 800px) {
+    .container .image img {
+        max-width: 100%; /* Establecer el ancho máximo al 100% para que se ajuste al contenedor */
+        height: auto;    /* Para mantener la proporción original de la imagen */
+        margin-right: 0;
+        transform: rotate(40deg) translateX(0); /* Ajustar la transformación en dispositivos móviles */
     }
 }
 
-
-@media(max-width: 800px){
-
+@media (max-width: 800px) {
     .links{
         display: none;
-        z-index: 10;
     }
-
     .container .image img{
         width: 100px;
         margin-right: 0;
@@ -186,20 +191,19 @@ section .content{
 }
 
 
-@media (max-width: 800px){
+@media (max-width: 800px) {
     .menu {
         display: block;
     }
-
-    .container .image {
+    .container .image img{
         position: relative;
-        z-index:-1; 
+        z-index:-1;
     }
     
     nav.active {
-        position:relative;
-        transform: translateX(0);
+        position: relative;
         z-index: 10;
+        transform: translateX(0);
     }
     
     .container .links,
@@ -219,7 +223,6 @@ section .content{
         top:50px;
         left:0;
         transform: translateX(100%);
-        transform: translateY();
         transition: transform 0.3s;
         z-index:10;
     }
