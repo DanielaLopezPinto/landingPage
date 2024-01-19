@@ -141,9 +141,9 @@ section .content{
     filter:drop-shadow(-10px -10px 200px rgb(216, 22, 174));
 }
 
-/*nav.active{
+nav.active{
     display:none;
-}*/
+}
 
 @media (max-width: 800px) {
     .content{
@@ -179,6 +179,7 @@ section .content{
     .container .image img{
         width: 100px;
         margin-right: 0;
+        
     }
 }
 
