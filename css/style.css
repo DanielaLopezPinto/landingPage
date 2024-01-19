@@ -138,6 +138,7 @@ section .content{
     transform:rotate(40deg)translateX(900px);
     filter:drop-shadow(-10px -10px 200px rgb(216, 22, 174));
 }
+
 @media(max-width:800px){
     .content{
         display: flex;
