@@ -164,48 +164,48 @@ section .content{
 }
 
 
-@media(max-width:800px){
-    .link{
-        display:none;
-        z-index:10;
+@media(max-width: 800px){
+
+    .links{
+        display: none;
+        z-index: 10;
     }
-    .image img{
-        width:100px;
-        margin-right:none;
+
+    .container .image img{
+        width: 100px;
+        margin-right: 0;
     }
 }
 
 .menu {
-    display: none; /* Inicialmente oculto en pantallas grandes */
+    display: none; 
     cursor: pointer;
     color: rgb(255, 255, 255);
     font-size: 1.5rem;
     margin-right:10px;
-    z-index:10;
 }
 
 
-@media (max-width: 800px) {
+@media (max-width: 800px){
     .menu {
         display: block;
     }
 
     .container .image {
         position: relative;
+        z-index:-1; 
     }
     
     nav.active {
+        position:relative;
         transform: translateX(0);
-        z-index: 10; /* Establece un z-index más alto para el menú desplegable */
+        z-index: 10;
     }
     
-
-    /* Ocultar la barra de navegación en pantallas pequeñas */
     .container .links,
-    .container nav.active {
+    .container nav.active{
         display: none;
         flex-direction: column; 
-        z-index:10;
     }
 
     .container .links.active,
@@ -219,17 +219,8 @@ section .content{
         top:50px;
         left:0;
         transform: translateX(100%);
+        transform: translateY();
         transition: transform 0.3s;
-        z-index:10;
-    }
-
-    /* Agregamos estilos para la lista de enlaces */
-    ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
         z-index:10;
     }
 }
