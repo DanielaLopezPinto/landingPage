@@ -180,6 +180,17 @@ section .content{
         display: block;
     }
 
+    .container .image {
+        position: relative;
+        z-index: 1; /* Establece un z-index más alto para la imagen */
+    }
+    
+    nav.active {
+        transform: translateX(0);
+        z-index: 2; /* Establece un z-index más alto para el menú desplegable */
+    }
+    
+
     /* Ocultar la barra de navegación en pantallas pequeñas */
     .container .links,
     .container nav.active {
