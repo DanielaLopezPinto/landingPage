@@ -430,7 +430,7 @@ Además, es común utilizar text-decoration junto con la pseudo-clase :hover par
     a:hover {
         text-decoration: underline;
     }
-
+Que cuando al pasar el cursor encima de un elemento haga cierta transicion o movimiento.
 
 
 
