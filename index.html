@@ -49,23 +49,5 @@
             </div>
         </div>
     </section>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            offset:1
-        });
-    </script>
-    <script src="js/main.js" defer></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-    let nav = document.querySelector('nav');
-    let menuBtn = document.querySelector('.menu');
-    let links = document.querySelector('.links'); // Agregamos esta línea para seleccionar .links
-    menuBtn.addEventListener('click', function () {
-        nav.classList.toggle('active');
-        links.classList.toggle('active'); // Agregamos esta línea para activar/desactivar .links
-    });
-});
-    </script>
 </body>
 </html>
